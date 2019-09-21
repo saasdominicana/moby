@@ -27,7 +27,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|md|graphql|mdx)\"",
-    "format": "npm run prettier -- --write"
+    "format": "npm run prettier -- --write",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,12 +64,23 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addon-storyshots": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.1.4",
     "@types/jest": "^24.0.18",
     "@types/ramda": "^0.26.22",
     "@types/react-router-dom": "^4.3.5",
+    "@types/storybook__addon-storyshots": "^5.1.1",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "^8.0.6",
     "emotion": "^10.0.17",
-    "jest-emotion": "^10.0.17"
+    "jest-emotion": "^10.0.17",
+    "react-test-renderer": "^16.9.0",
+    "require-context.macro": "^1.2.1"
   }
 }
