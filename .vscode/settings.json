@@ -1,4 +1,0 @@
-{
-  "jest.showCoverageOnLoad": true,
-  "jest.pathToJest": "npm run test --"
-}

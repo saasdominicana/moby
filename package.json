@@ -22,8 +22,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "CI=true react-scripts test --runInBand --bail --findRelatedTests",
     "test:coverage": "react-scripts test --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|md|graphql|mdx)\"",
+    "format": "npm run prettier -- --write"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,16 +47,17 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/serviceWorker.js",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/path/to/dir/"
+      "!src/**/*.stories.{js,jsx,ts,tsx}",
+      "!src/**/index.{js,jsx,ts,tsx}",
+      "!**/serviceWorker.js",
+      "!**/setupTests.js"
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
+        "branches": 70,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
       }
     }
   },
